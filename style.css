@@ -42,7 +42,8 @@ body{
 }
 .logo span{
     color: white;
-    margin-top: 10px;
+    font-size: 20px;
+    margin-top: 25px;
     margin-left: 20px;
     display: inline-block;
 }
