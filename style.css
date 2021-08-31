@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+.text-center{
+    text-align: center;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header Section */
+
+.header-section{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.logo{
+    float: left;
+    width: 30%;
+}
+.logo img{
+    width: 70px;
+    margin-top: 4px;
+    float: left;
+}
+.logo span{
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.header-menu{
+    float: right;
+    width: 70%;
+}
+.header-menu ul{
+    text-align: right;
+}
+.header-menu ul li{
+    display: inline-block;
+    position: relative;
+}
+.header-menu ul li a{
+    display: inline-block;
+    color:white;
+    background-color: black;
+    padding: 0 20px;
+    font-size: 25px;
+    line-height: 79px;
+
+}
+.header-menu ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+    height: 0;
+    width: 0;
+    background-color: white;
+    transition: .4s;
+}
+.header-menu ul li:hover::after{
+    width: 70%;
+    height: 3px;
+}
+
+
+/* DropDown start */
+
+
+.header-menu ul li ul{
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    width: 213px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: .5s;
+}
+.header-menu ul li ul li{
+    display: block;
+    text-align: left;
+}
+.header-menu ul li ul li a{
+    display: block;
+}
+.header-menu ul li ul li:first-child{
+    border-top: 2px solid white;
+}
+.header-menu ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}
+.header-menu ul li ul li:hover a{
+    background-color: white;
+    color: black;
+}
+.header-menu ul li ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+    height: 0;
+    width: 0;
+    background-color: black;
+    transition: .4s;
+}
+.header-menu ul li ul li:hover::after{
+    width: 40%;
+    height: 3px;
+}
+
+/* Banner section */
+
+.banner-section{
+    background: url(https://visme.co/blog/wp-content/uploads/2018/03/layout-design-grids-header-wide.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 180px;
+    position: relative;
+    z-index: 1;
+}
+.banner-section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.banner-section h2{
+    font-size: 25px;
+    color: rgb(0, 255, 0);
+}
+.banner-section h1{
+    font-size: 65px;
+    color: rgba(248, 244, 244, 0.835);
+    margin-bottom: 30px;
+}
+.btn1{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 20px 30px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 20px;
+    transition: .5s;
+    font-weight: 700;
+}
+.btn1 a, .btn2 a{
+    color: white;
+}
+.btn1:hover{
+    background-color: rgba(0, 0, 255, 0.63);
+}
+/* .btn1:hover a, .btn2:hover a{
+    color: black;
+} */
+.btn2{
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 20px;
+    transition: .5s;
+    font-weight: 700;
+}
+.btn2:hover{
+    background-color: rgba(0, 0, 255, 0.63);
+}
